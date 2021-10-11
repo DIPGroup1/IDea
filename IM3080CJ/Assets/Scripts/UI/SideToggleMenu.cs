@@ -18,11 +18,11 @@ public class SideToggleMenu : MonoBehaviour
     [SerializeField] private Ease rotationEase;
 
 
-    private Vector3 rotstart = new Vector3(0, 0, 180);
-    private Vector3 rotend = new Vector3(0, 0, 0);
+    [SerializeField] private Vector3 rotstart; 
+    [SerializeField]private Vector3 rotend; 
 
-    private Vector3 EndPosition = new Vector3(1693,336,0);
-    private Vector3 StartPosition = new Vector3(2132, 336, 0);
+    [SerializeField]private Vector3 EndPosition;
+    [SerializeField]private Vector3 StartPosition;
     private Button toggle;
     private GameObject container;
     private GameObject tri;

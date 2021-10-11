@@ -76,6 +76,11 @@ namespace RTG
         public float PrjSwitchProgress { get { return _prjSwitchTranstion.Progress; } }
         public float PrjSwitchDurationInSeconds { get { return _projectionSwitchSettings.TransitionDurationInSeconds; } }
         public bool IsDoingFocus { get { return _isDoingFocus; } }
+
+        public void setFocusCamera(Camera cam)
+        {
+            _targetCamera = cam;
+        }
         public Vector3 WorldPosition 
         { 
             get { return _targetTransform.position; }

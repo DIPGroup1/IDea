@@ -2,52 +2,46 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class LeftButton : MonoBehaviour
 {
     // Start is called before the first frame update
+    private bool expanded;
     public string state;
     public GameObject leftPanel;
     Button leftButton;
     public Sprite hideSprite;
     public Sprite displaySprite;
+
+    private Vector3 startposition = new Vector3(-1316, 0, 0);
+    private Vector3 endposition = new Vector3(-606, 0, 0);
     void Start()
     {
+        expanded = false;
+       
         leftButton = GetComponent<Button>();
         leftButton.onClick.AddListener(TaskOnClick);
-        state = "hide";
 
     }
     void TaskOnClick()
     {
+        expanded = !expanded;
         
-        if (state == "hide")
+        if (expanded)
         {
-            leftPanel.transform.localPosition = new Vector3(-606, 0, 0);
+            leftPanel.transform.DOMove(endposition,0.3f).SetEase(Ease.InOutBack);
             Debug.Log(leftPanel.transform.position);
-            Debug.Log(state);
-            state = "display";
-            GetComponent<Image>().sprite = displaySprite;
+
+            
         }
         else 
         {
-            leftPanel.transform.localPosition = new Vector3(-1323, 0, 0);
+            leftPanel.transform.DOMove(startposition, 0.3f).SetEase(Ease.InOutBack);
             Debug.Log(leftPanel.transform.position);
-            Debug.Log(state);
-            state = "hide";
-            GetComponent<Image>().sprite = hideSprite;
 
         }
 
     }
 
-    /*When function called, hide side panel. For when click outside panel*/
-    public void HidePanel()
-    {
-        leftPanel.transform.localPosition = new Vector3(-1311, 0, 0);
-        Debug.Log(leftPanel.transform.position);
-        Debug.Log(state);
-        state = "hide";
-        GetComponent<Image>().sprite = hideSprite;
-    }
 }

@@ -16,7 +16,6 @@ public class CloseTabs : MonoBehaviour
 
     void TaskOnClick()
     {
-        leftPanel.HidePanel();
         topBar.setInactive();
         Debug.Log("Close Panels");
     }

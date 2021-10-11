@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/ShenAn.unity
+    guid: e36157f1cb1d50e4db5aeb26ec7a03ed
+  - enabled: 1
+    path: Assets/Scenes/Client.unity
+    guid: df20c2c5419bbc046b27bb15cc660c97
   m_configObjects: {}

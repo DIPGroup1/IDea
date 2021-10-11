@@ -1,14 +1,18 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - ClientStartUp
+    - Configuration
     - ESCAPE
     - FirstPersonAIO
     - FloatControlManager
     - FurniturePlacer
-    - LeftButton
     - ModelManager
+    - PlayFab.Networking.UnityNetworkServer
     - Player
     - Player2
+    - PlayerCameraController
+    - PlayerMovementController
     - RTG.RTCameraBackground
     - RTG.RTFocusCamera
     - RTG.RTGApp
@@ -19,23 +23,49 @@ ScriptsOnlyBuild:
     - RTG.RTUndoRedo
     - Selector
     - SelectorCameraController
+    - ServerStart
     - SettingItems
     - SettingMenu
     - SideToggleMenu
     - UIBedGrey
     - UIMaterial
-    - topbar
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
+    - Cinemachine.CinemachineCollider
     - Cinemachine.CinemachineComposer
     - Cinemachine.CinemachineFreeLook
     - Cinemachine.CinemachineOrbitalTransposer
     - Cinemachine.CinemachinePipeline
+    - Cinemachine.CinemachineTransposer
     - Cinemachine.CinemachineVirtualCamera
     DOTween.dll:
     - DG.Tweening.Core.DOTweenSettings
+    Mirror.Components.dll:
+    - Mirror.NetworkTransform
+    Mirror.dll:
+    - Mirror.NetworkIdentity
+    - Mirror.NetworkManager
+    - Mirror.NetworkManagerHUD
+    - Mirror.TelepathyTransport
+    - kcp2k.KcpTransport
+    PlayFab.dll:
+    - PlayFabSharedSettings
+    PlayFabEditorExtensions.dll:
+    - PlayFab.PfEditor.PlayFabEditor
+    - PlayFab.PfEditor.PlayFabEditorPrefsSO
+    Unity.InputSystem.dll:
+    - UnityEngine.InputSystem.InputSettings
+    - UnityEngine.InputSystem.InputSystemObject
+    - UnityEngine.InputSystem.RemoteInputPlayerConnection
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_ColorGradient
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -70,6 +100,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
     - Class: 64
@@ -89,85 +121,123 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11368}
+      Script: {instanceID: 11404}
     - Class: 114
-      Script: {instanceID: 11370}
+      Script: {instanceID: 11406}
     - Class: 114
-      Script: {instanceID: 11402}
+      Script: {instanceID: 11452}
     - Class: 114
-      Script: {instanceID: 11540}
+      Script: {instanceID: 11456}
     - Class: 114
-      Script: {instanceID: 11742}
+      Script: {instanceID: 11608}
     - Class: 114
-      Script: {instanceID: 11816}
+      Script: {instanceID: 11626}
     - Class: 114
-      Script: {instanceID: 11924}
+      Script: {instanceID: 11908}
     - Class: 114
-      Script: {instanceID: 12144}
+      Script: {instanceID: 11938}
     - Class: 114
-      Script: {instanceID: 12340}
+      Script: {instanceID: 12042}
     - Class: 114
-      Script: {instanceID: 12550}
+      Script: {instanceID: 12196}
     - Class: 114
-      Script: {instanceID: 12562}
+      Script: {instanceID: 12484}
     - Class: 114
-      Script: {instanceID: 12588}
+      Script: {instanceID: 12736}
     - Class: 114
-      Script: {instanceID: 12604}
+      Script: {instanceID: 13040}
     - Class: 114
-      Script: {instanceID: 12624}
+      Script: {instanceID: 13058}
     - Class: 114
-      Script: {instanceID: 12742}
+      Script: {instanceID: 13074}
     - Class: 114
-      Script: {instanceID: 12810}
+      Script: {instanceID: 13106}
     - Class: 114
-      Script: {instanceID: 12840}
+      Script: {instanceID: 13122}
     - Class: 114
-      Script: {instanceID: 12974}
+      Script: {instanceID: 13146}
     - Class: 114
-      Script: {instanceID: 13066}
+      Script: {instanceID: 13192}
     - Class: 114
-      Script: {instanceID: 13098}
+      Script: {instanceID: 13314}
     - Class: 114
-      Script: {instanceID: 13282}
+      Script: {instanceID: 13398}
     - Class: 114
-      Script: {instanceID: 13294}
+      Script: {instanceID: 13442}
     - Class: 114
-      Script: {instanceID: 13348}
+      Script: {instanceID: 13638}
     - Class: 114
-      Script: {instanceID: 13386}
+      Script: {instanceID: 13640}
     - Class: 114
-      Script: {instanceID: 13484}
+      Script: {instanceID: 13764}
     - Class: 114
-      Script: {instanceID: 13598}
+      Script: {instanceID: 13806}
     - Class: 114
-      Script: {instanceID: 13986}
+      Script: {instanceID: 14060}
     - Class: 114
-      Script: {instanceID: 14094}
+      Script: {instanceID: 14074}
     - Class: 114
-      Script: {instanceID: 14186}
+      Script: {instanceID: 14106}
     - Class: 114
-      Script: {instanceID: 14464}
+      Script: {instanceID: 14162}
     - Class: 114
-      Script: {instanceID: 14614}
+      Script: {instanceID: 14202}
     - Class: 114
-      Script: {instanceID: 14662}
+      Script: {instanceID: 14210}
     - Class: 114
-      Script: {instanceID: 14936}
+      Script: {instanceID: 14346}
     - Class: 114
-      Script: {instanceID: 15120}
+      Script: {instanceID: 14484}
     - Class: 114
-      Script: {instanceID: 15126}
+      Script: {instanceID: 14678}
     - Class: 114
-      Script: {instanceID: 15158}
+      Script: {instanceID: 14978}
     - Class: 114
-      Script: {instanceID: 15182}
+      Script: {instanceID: 15004}
     - Class: 114
-      Script: {instanceID: 15186}
+      Script: {instanceID: 15010}
     - Class: 114
-      Script: {instanceID: 15208}
+      Script: {instanceID: 15156}
     - Class: 114
-      Script: {instanceID: 15254}
+      Script: {instanceID: 15242}
+    - Class: 114
+      Script: {instanceID: 15362}
+    - Class: 114
+      Script: {instanceID: 15422}
+    - Class: 114
+      Script: {instanceID: 15570}
+    - Class: 114
+      Script: {instanceID: 15672}
+    - Class: 114
+      Script: {instanceID: 15874}
+    - Class: 114
+      Script: {instanceID: 15898}
+    - Class: 114
+      Script: {instanceID: 16220}
+    - Class: 114
+      Script: {instanceID: 16288}
+    - Class: 114
+      Script: {instanceID: 16350}
+    - Class: 114
+      Script: {instanceID: 16492}
+    - Class: 114
+      Script: {instanceID: 16590}
+    - Class: 114
+      Script: {instanceID: 16602}
+    - Class: 114
+      Script: {instanceID: 16652}
+    - Class: 114
+      Script: {instanceID: 16688}
+    - Class: 114
+      Script: {instanceID: 16692}
+    - Class: 114
+      Script: {instanceID: 16726}
+    - Class: 114
+      Script: {instanceID: 16792}
+    - Class: 114
+      Script: {instanceID: 16964}
+    - Class: 114
+      Script: {instanceID: 16998}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -175,6 +245,8 @@ ScriptsOnlyBuild:
     - Class: 128
       Script: {instanceID: 0}
     - Class: 136
+      Script: {instanceID: 0}
+    - Class: 143
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -207,10 +279,22 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
+      Hash: aa88ae22474df55295327e4ee99e5a24
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Toggle
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: RTG
     className: Tut_1_Enabling_and_Disabling_Gizmos
+  - hash:
+      serializedVersion: 2
+      Hash: 8617aadb248da95f2695ca5669494400
+    assemblyName: Mirror.dll
+    namespaceName: Mirror
+    className: TelepathyTransport
   - hash:
       serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
@@ -249,16 +333,34 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
+      Hash: 4e55399bb1b81f08ab790913f62fbbac
+    assemblyName: Mirror.dll
+    namespaceName: Mirror
+    className: NetworkManagerHUD
+  - hash:
+      serializedVersion: 2
       Hash: 225ae117f12b0cf316332bf40dfcd78f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FurniturePlacer
   - hash:
       serializedVersion: 2
+      Hash: 0e68c7511d0bb7746e68316200e21bb0
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror
+    className: SpatialHashingInterestManagement
+  - hash:
+      serializedVersion: 2
       Hash: a2113831d3323f931007e1b3812dc814
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineFollowZoom
+  - hash:
+      serializedVersion: 2
+      Hash: 192ca9716d03752ea1d90a78bc2daac9
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.NetworkRoom
+    className: RandomColor
   - hash:
       serializedVersion: 2
       Hash: 9d6268f15fd0dc3af854308d42329a64
@@ -285,10 +387,34 @@ ScriptsOnlyBuild:
     className: PlayerQuitHandler
   - hash:
       serializedVersion: 2
+      Hash: 265cf1537361bce87401ba1fba27baf3
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror.Experimental
+    className: NetworkTransform
+  - hash:
+      serializedVersion: 2
+      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror
+    className: NetworkOwnerChecker
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: GroupTrack
+  - hash:
+      serializedVersion: 2
+      Hash: b18f0d55b218ff8d17c2c7411b02c1bf
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.Additive
+    className: PlayerController
+  - hash:
+      serializedVersion: 2
+      Hash: fc169718e5fd24cea7425f24908c0418
+    assemblyName: Unity.InputSystem.dll
+    namespaceName: UnityEngine.InputSystem.Editor
+    className: PlayerInputManagerEditor
   - hash:
       serializedVersion: 2
       Hash: a5781dc71a671b1ad2b38de19f24b71f
@@ -301,6 +427,24 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: GroupWeightManipulator
+  - hash:
+      serializedVersion: 2
+      Hash: 0558fd8cb7e7d0d08ede1688a0940de6
+    assemblyName: Mirror.dll
+    namespaceName: Mirror
+    className: NetworkManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Mirror.dll
+    namespaceName: Mirror
+    className: NetworkStartPosition
+  - hash:
+      serializedVersion: 2
+      Hash: 8ea27909a92fe60806557460a2594f37
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.MultipleAdditiveScenes
+    className: PhysicsCollision
   - hash:
       serializedVersion: 2
       Hash: aeb62f729c52c814dec86c47dcac1471
@@ -322,6 +466,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro
+    className: TMP_PhoneNumberValidator
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: PositionAsUV1
@@ -331,6 +481,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 1c717f9024580154792437df7a691396
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.MultipleMatch
+    className: MatchController
   - hash:
       serializedVersion: 2
       Hash: 32fce7b97c39bff4b4f6c0f53f7e6bf1
@@ -351,6 +507,12 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
+      Hash: 426e5bd616852254b77531cd1a8e29b6
+    assemblyName: Unity.InputSystem.dll
+    namespaceName: UnityEngine.InputSystem.OnScreen
+    className: OnScreenStick
+  - hash:
+      serializedVersion: 2
       Hash: 234d407605354852c48e57df17c9a1c6
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -363,10 +525,34 @@ ScriptsOnlyBuild:
     className: GridLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: 37c782056623a482d772a08897449977
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror.Experimental
+    className: NetworkRigidbody2D
+  - hash:
+      serializedVersion: 2
       Hash: 6dd3dc11942e98c0a809c81f95fc960c
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineExternalCamera
+  - hash:
+      serializedVersion: 2
+      Hash: 5da7b9e4b43d0ba75d617a81259ec141
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.Chat
+    className: ChatWindow
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.InputSystem.dll
+    namespaceName: UnityEngine.InputSystem.UI.Editor
+    className: InputSystemUIInputModuleEditor
+  - hash:
+      serializedVersion: 2
+      Hash: f3a8ccc18ad656ac8993b34a1b30984f
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.NetworkRoom
+    className: NetworkRoomPlayerExt
   - hash:
       serializedVersion: 2
       Hash: b5eb08b578a2f2d80bb106cbe65ab501
@@ -393,6 +579,12 @@ ScriptsOnlyBuild:
     className: LayoutElement
   - hash:
       serializedVersion: 2
+      Hash: ede3d522ce29a72deb2613abda57d11e
+    assemblyName: Unity.InputSystem.dll
+    namespaceName: UnityEngine.InputSystem
+    className: RemoteInputPlayerConnection
+  - hash:
+      serializedVersion: 2
       Hash: cbae2ed2d2d53cc8f539e7cb4f29bc1f
     assemblyName: Cinemachine.dll
     namespaceName: 
@@ -405,10 +597,22 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 295831406da5907d41f58d84acd55d8d
+    assemblyName: Unity.InputSystem.dll
+    namespaceName: UnityEngine.InputSystem.Editor
+    className: InputActionEditorWindow
+  - hash:
+      serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AnimationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: a8afcbd0a467dd957879959591dec288
+    assemblyName: Unity.InputSystem.dll
+    namespaceName: UnityEngine.InputSystem.XR
+    className: TrackedPoseDriver
   - hash:
       serializedVersion: 2
       Hash: 0b3d58d7cd8bf2e1901951fd4cdb6cab
@@ -421,6 +625,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Createmodel
+  - hash:
+      serializedVersion: 2
+      Hash: a383c1d6573534c7ddf32caac0f62a9a
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.Basic
+    className: BasicNetManager
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
@@ -441,10 +651,22 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
+      Hash: 50d893c48b1c02a4b8ede5fe28ff9e85
+    assemblyName: Unity.InputSystem.dll
+    namespaceName: UnityEngine.InputSystem.UI
+    className: TrackedDeviceRaycaster
+  - hash:
+      serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AnimationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: fc67f14ea89c506f4f65b0b93f858139
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.MultipleMatch
+    className: PlayerGUI
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -459,10 +681,22 @@ ScriptsOnlyBuild:
     className: CinemachineFreeLook
   - hash:
       serializedVersion: 2
+      Hash: 192ca9716d03752ea1d90a78bc2daac9
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.Additive
+    className: RandomColor
+  - hash:
+      serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Mask
+  - hash:
+      serializedVersion: 2
+      Hash: cf95add559be53ae8bfdfcea86c5a18f
+    assemblyName: Mirror.dll
+    namespaceName: Mirror
+    className: MultiplexTransport
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
@@ -483,10 +717,40 @@ ScriptsOnlyBuild:
     className: NoiseSettings
   - hash:
       serializedVersion: 2
+      Hash: f17a7afbb6fc4d6b5c3ba20ed1c93f68
+    assemblyName: Unity.InputSystem.dll
+    namespaceName: UnityEngine.InputSystem.UI
+    className: InputSystemUIInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 6663435805926faf16934aed992cd26b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: Benchmark03
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: RTG
     className: Tut_4_Mesh_and_Center_Pivots
+  - hash:
+      serializedVersion: 2
+      Hash: 8e667a9bf32d375cc575dff98e6aebe6
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.Benchmark
+    className: BenchmarkNetworkManager
+  - hash:
+      serializedVersion: 2
+      Hash: e6f0efd0e20669d577e9d21526b3d3f9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: WarpTextExample
+  - hash:
+      serializedVersion: 2
+      Hash: 1f9fb252a4139c11702893640614ee68
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: PlayFab.Networking
+    className: UnityNetworkServer
   - hash:
       serializedVersion: 2
       Hash: 34bf7f168cdb33d5db3126259a634948
@@ -499,6 +763,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: EventSystem
+  - hash:
+      serializedVersion: 2
+      Hash: 70a7fe614ffc8d4a5ee1d04d107f3106
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.Benchmark
+    className: MonsterMovement
   - hash:
       serializedVersion: 2
       Hash: 0fb27be807aa299702f28ad0bcad1f46
@@ -531,6 +801,12 @@ ScriptsOnlyBuild:
     className: SelectorCameraController
   - hash:
       serializedVersion: 2
+      Hash: dd7520b7d4e690e8c593273e7b9fbe80
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TMP_TextEventCheck
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Cinemachine.dll
     namespaceName: 
@@ -543,10 +819,22 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
+      Hash: 08ee418b801850b56a351565b9c8bb78
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro
+    className: TMP_TextEventHandler
+  - hash:
+      serializedVersion: 2
       Hash: 611bc970ee9dc090779a3fac6a18fac6
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineFramingTransposer
+  - hash:
+      serializedVersion: 2
+      Hash: f5763415ffcb37f6278091eb8b77a954
+    assemblyName: SimpleWebTransport.dll
+    namespaceName: Mirror.SimpleWeb
+    className: SimpleWebTransport
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -555,10 +843,34 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
+      Hash: 64ad1bd05f4939fa76a6b091d9a9d755
+    assemblyName: Unity.InputSystem.dll
+    namespaceName: UnityEngine.InputSystem
+    className: PlayerInputManager
+  - hash:
+      serializedVersion: 2
       Hash: 8dc90e648ac06f43bdd31ac9fa8f4579
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: 47930f3b40e24ef5b3b5e3d9ada7097a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: Benchmark01
+  - hash:
+      serializedVersion: 2
+      Hash: c5bf757e45517373f48138682b6cc89f
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.Additive
+    className: ZoneHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 1d12411bfa32d734c4dad798554fe0fa
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror
+    className: NetworkRoomManager
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -567,16 +879,34 @@ ScriptsOnlyBuild:
     className: Tut_6_CustomWorldPivot
   - hash:
       serializedVersion: 2
-      Hash: 0e149eb2b0295ce4cdf0039ad88caaea
+      Hash: c9bda0a8b2a82287cfac6ec1f74c758e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ModelManager
+  - hash:
+      serializedVersion: 2
+      Hash: 991d2e8f56cd6070136c2ea5db7ccd6d
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.Tanks
+    className: Tank
+  - hash:
+      serializedVersion: 2
+      Hash: e3a9d5756f1162dd7720942841561275
+    assemblyName: Unity.InputSystem.dll
+    namespaceName: UnityEngine.InputSystem
+    className: PlayerInput
   - hash:
       serializedVersion: 2
       Hash: 37de53a49708b087da4050fc1ca7a6ee
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachinePOV
+  - hash:
+      serializedVersion: 2
+      Hash: 6be939d6f0aad748aa63a8815400aaa2
+    assemblyName: Unity.InputSystem.dll
+    namespaceName: UnityEngine.InputSystem
+    className: InputSettings
   - hash:
       serializedVersion: 2
       Hash: 3c3b95581badce98e6cda5d9b6e8add6
@@ -591,10 +921,40 @@ ScriptsOnlyBuild:
     className: KeyboardManager
   - hash:
       serializedVersion: 2
+      Hash: 9b01b1d80bd3ecf4eaca45e1a22d444e
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror.Experimental
+    className: NetworkRigidbody
+  - hash:
+      serializedVersion: 2
       Hash: 75c8fcfa60d628504560b37b9691851a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIMaterial
+  - hash:
+      serializedVersion: 2
+      Hash: eaa0110e06e6166c51e1d7bf2eed930c
+    assemblyName: Mirror.dll
+    namespaceName: Mirror
+    className: LatencySimulation
+  - hash:
+      serializedVersion: 2
+      Hash: cd0ecdca0166232906c6f2df9dddc3d3
+    assemblyName: Unity.InputSystem.dll
+    namespaceName: UnityEngine.InputSystem.Editor
+    className: InputActionDebuggerWindow
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.InputSystem.dll
+    namespaceName: UnityEngine.InputSystem.Editor
+    className: InputActionImporterEditor
+  - hash:
+      serializedVersion: 2
+      Hash: 287a4aa7392bcfb309b4d7b4dc89eb3c
+    assemblyName: Unity.InputSystem.dll
+    namespaceName: UnityEngine.InputSystem.Editor
+    className: PlayerInputEditor
   - hash:
       serializedVersion: 2
       Hash: 2ce2187bbae6f802011f568630bd3d1f
@@ -603,10 +963,28 @@ ScriptsOnlyBuild:
     className: CinemachineOrbitalTransposer
   - hash:
       serializedVersion: 2
+      Hash: 72bb56211eab75f0338b4e749880ad6d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ClientStartUp
+  - hash:
+      serializedVersion: 2
+      Hash: b18f0d55b218ff8d17c2c7411b02c1bf
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.MultipleAdditiveScenes
+    className: PlayerController
+  - hash:
+      serializedVersion: 2
       Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ScrollRect
+  - hash:
+      serializedVersion: 2
+      Hash: cd85cd0021d4c0ab017ad69b7f3332b5
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.MultipleMatch
+    className: CanvasController
   - hash:
       serializedVersion: 2
       Hash: 7ca765ad7969aae95e8011264b9c4046
@@ -639,10 +1017,40 @@ ScriptsOnlyBuild:
     className: CinemachineComposer
   - hash:
       serializedVersion: 2
+      Hash: f84b810c764d5a270da7c7591f2be2f1
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.MultipleMatch
+    className: MatchGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 3375c3d749f8f4cad889721b431bdc27
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: CameraController
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: RTG
     className: Tut_2_MultipleTargetObjects
+  - hash:
+      serializedVersion: 2
+      Hash: e63944317d2f5958e31963668bb29158
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: VertexJitter
+  - hash:
+      serializedVersion: 2
+      Hash: 702330b33d6f348f76db0c974f6e02c3
+    assemblyName: Mirror.Authenticators.dll
+    namespaceName: Mirror.Authenticators
+    className: BasicAuthenticator
+  - hash:
+      serializedVersion: 2
+      Hash: bfeb96683d3796cadaab890bfdfe92be
+    assemblyName: Unity.InputSystem.dll
+    namespaceName: UnityEngine.InputSystem.Editor
+    className: InputDebuggerWindow
   - hash:
       serializedVersion: 2
       Hash: 15882a52798c275361cd0a3ada984ec5
@@ -681,16 +1089,46 @@ ScriptsOnlyBuild:
     className: DOTweenSettings
   - hash:
       serializedVersion: 2
+      Hash: e87f50864f8a979f1228e8c69bd62658
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.Pong
+    className: Ball
+  - hash:
+      serializedVersion: 2
+      Hash: bc8d5a16cdc0bb11217587af2000e9e4
+    assemblyName: PlayFab.dll
+    namespaceName: 
+    className: PlayFabSharedSettings
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
+      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror
+    className: NetworkMatch
+  - hash:
+      serializedVersion: 2
+      Hash: 57ffcf646fc996572e2fbc3d96ee6be4
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror.Experimental
+    className: NetworkLerpRigidbody
+  - hash:
+      serializedVersion: 2
       Hash: 7dc6783c9a52383ee0f7abb0d3b1e0f9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FloatControlManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.InputSystem.dll
+    namespaceName: UnityEngine.InputSystem.UI
+    className: BaseInputOverride
   - hash:
       serializedVersion: 2
       Hash: 694d20920c0e41f567e119f7159a3644
@@ -700,15 +1138,57 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: PlayFab.dll
+    namespaceName: PlayFab
+    className: PlayFabMultiplayerAgentView
+  - hash:
+      serializedVersion: 2
+      Hash: f3d7ad3b0bbd518c10c88f1a552bf6c9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerMovementController
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: RTG
     className: RTInputDevice
+  - hash:
+      serializedVersion: 2
+      Hash: b18f0d55b218ff8d17c2c7411b02c1bf
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.NetworkRoom
+    className: PlayerController
+  - hash:
+      serializedVersion: 2
+      Hash: c1f5356fcd27668ddc25078e27f9828d
+    assemblyName: Unity.InputSystem.dll
+    namespaceName: UnityEngine.InputSystem.UI
+    className: MultiplayerEventSystem
   - hash:
       serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: ad4af01eeb7f0a9ae0be2df3e0f1953a
+    assemblyName: Unity.InputSystem.dll
+    namespaceName: UnityEngine.InputSystem.Editor
+    className: InputStateWindow
+  - hash:
+      serializedVersion: 2
+      Hash: 9b06583966b5c25325233c4ef1ab1fd4
+    assemblyName: Unity.InputSystem.dll
+    namespaceName: UnityEngine.InputSystem.HID.Editor
+    className: HIDDescriptorWindow
+  - hash:
+      serializedVersion: 2
+      Hash: 2c0a467ee7950c941c2dd8ef6b974a7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ChatController
   - hash:
       serializedVersion: 2
       Hash: 5f1752ed2092162f016c19510c28a8b9
@@ -723,10 +1203,22 @@ ScriptsOnlyBuild:
     className: Demo
   - hash:
       serializedVersion: 2
+      Hash: ff4753395d726a7aadce9c48dcaf99d6
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.NetworkRoom
+    className: Reward
+  - hash:
+      serializedVersion: 2
       Hash: f84d945e5e1ca985698660fc26e9657f
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: d3f29ba27f28c1f558880c4df5545ed3
+    assemblyName: Unity.InputSystem.dll
+    namespaceName: 
+    className: DownloadableSample
   - hash:
       serializedVersion: 2
       Hash: 56df1fa7cea034df9863fe5a24200a32
@@ -753,6 +1245,54 @@ ScriptsOnlyBuild:
     className: Player2
   - hash:
       serializedVersion: 2
+      Hash: 460f1bc7ddb5a5325403b8276116aa4d
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror
+    className: NetworkAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 192ca9716d03752ea1d90a78bc2daac9
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.MultipleAdditiveScenes
+    className: RandomColor
+  - hash:
+      serializedVersion: 2
+      Hash: 5d5b0c61f3ab6ff5f41b1bbe19764526
+    assemblyName: Unity.InputSystem.dll
+    namespaceName: UnityEngine.InputSystem.OnScreen
+    className: OnScreenButton
+  - hash:
+      serializedVersion: 2
+      Hash: b26c6f4c6312e2952bbe7d0df1ea026e
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror
+    className: NetworkPingDisplay
+  - hash:
+      serializedVersion: 2
+      Hash: ffce2d4a755fb0d70ce32bd8469c3b40
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.Chat
+    className: ChatNetworkManager
+  - hash:
+      serializedVersion: 2
+      Hash: 26d5c4d3aa5e668e2a134fd27c936004
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.MultipleMatch
+    className: CellGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror
+    className: NetworkMatchChecker
+  - hash:
+      serializedVersion: 2
+      Hash: e244702e0dc05782229aa524e4d757f5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TMP_ExampleScript_01
+  - hash:
+      serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -765,10 +1305,28 @@ ScriptsOnlyBuild:
     className: CinemachineTransposer
   - hash:
       serializedVersion: 2
+      Hash: 295852e83016219fe0ab9a38fc36f74a
+    assemblyName: Unity.InputSystem.dll
+    namespaceName: UnityEngine.InputSystem
+    className: InputActionAsset
+  - hash:
+      serializedVersion: 2
       Hash: a66794b62dbf044668a5f102bb7908c2
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineImpulseListener
+  - hash:
+      serializedVersion: 2
+      Hash: 144f39e785cd2926af56aa422f7e8948
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror
+    className: NetworkSceneChecker
+  - hash:
+      serializedVersion: 2
+      Hash: 285f5d7c369d870b93f4a2cbcec118e4
+    assemblyName: Unity.InputSystem.dll
+    namespaceName: UnityEngine.InputSystem.Editor
+    className: InputDeviceDebuggerWindow
   - hash:
       serializedVersion: 2
       Hash: e6d75f1a9bc0c6f7085df0baa077e688
@@ -783,6 +1341,12 @@ ScriptsOnlyBuild:
     className: CinemachineSameAsFollowTarget
   - hash:
       serializedVersion: 2
+      Hash: f3a8ccc18ad656ac8993b34a1b30984f
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror
+    className: NetworkRoomPlayer
+  - hash:
+      serializedVersion: 2
       Hash: 4a639215e29265dd99e4fed19e3fa9f4
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -793,6 +1357,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: RTG
     className: RTSceneGizmoCamera
+  - hash:
+      serializedVersion: 2
+      Hash: 11319334e5365797f8056694f9b5dae4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: ObjectSpin
+  - hash:
+      serializedVersion: 2
+      Hash: 5d0487e1b0627c8abf0e49a83de1d88b
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.Additive
+    className: AdditiveNetworkManager
   - hash:
       serializedVersion: 2
       Hash: f64fd37da5cb89243ec68b5026d70bb8
@@ -813,6 +1389,30 @@ ScriptsOnlyBuild:
     className: CinemachineMixingCamera
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.InputSystem.dll
+    namespaceName: UnityEngine.InputSystem.Editor
+    className: InputActionAssetEditor
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro
+    className: TMP_DigitValidator
+  - hash:
+      serializedVersion: 2
+      Hash: 3fe74dd3b211760c4ed03510eafabc55
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.MultipleMatch
+    className: RoomGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 31641d3fb597a24176aba6c9db9d92b0
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.Basic
+    className: Player
+  - hash:
+      serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -831,10 +1431,16 @@ ScriptsOnlyBuild:
     className: CinemachineShot
   - hash:
       serializedVersion: 2
-      Hash: 2359d45c1782b547878f31e982917ce3
+      Hash: c5eef90f0dfa3aa12d79e7769406888a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SideToggleMenu
+  - hash:
+      serializedVersion: 2
+      Hash: fe1fdeffc2067077b2f1a90b210c2532
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DropdownSample
   - hash:
       serializedVersion: 2
       Hash: 87ad3705a58f19c47136728d4a6e9c47
@@ -855,10 +1461,28 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TextConsoleSimulator
+  - hash:
+      serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: Physics2DRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 62fef86270a167c41a606cfca1ecc156
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: ShaderPropAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TMP_TextSelector_A
   - hash:
       serializedVersion: 2
       Hash: 1e3d6222ff533d213aab144eb854a53b
@@ -867,16 +1491,64 @@ ScriptsOnlyBuild:
     className: CinemachineTouchInputMapper
   - hash:
       serializedVersion: 2
+      Hash: f3a8ccc18ad656ac8993b34a1b30984f
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror
+    className: NetworkLobbyPlayer
+  - hash:
+      serializedVersion: 2
+      Hash: 0558fd8cb7e7d0d08ede1688a0940de6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ClientNetworkManager
+  - hash:
+      serializedVersion: 2
+      Hash: 91835d5ad99155431c21b3b548706002
+    assemblyName: Mirror.Authenticators.dll
+    namespaceName: Mirror.Authenticators
+    className: TimeoutAuthenticator
+  - hash:
+      serializedVersion: 2
+      Hash: 55f8c6238de35a22ccf4e5ffe39aa1ac
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.RigidbodyPhysics
+    className: AddForce
+  - hash:
+      serializedVersion: 2
       Hash: df76de5fb2b27007d514fdb38b91cf89
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineVirtualCamera
   - hash:
       serializedVersion: 2
+      Hash: f61c040f6d2615f5633257d6ead0921d
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror
+    className: DistanceInterestManagement
+  - hash:
+      serializedVersion: 2
+      Hash: 9e12720e9f1df1639263519e77f2c4d7
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror.Experimental
+    className: NetworkTransformChild
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: f5e6011cc48685d88d4a84fff942c016
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Configuration
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: SimpleScript
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -891,10 +1563,28 @@ ScriptsOnlyBuild:
     className: MouseManager
   - hash:
       serializedVersion: 2
+      Hash: 893215e6d3b6e377384e413e9adef0af
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerCameraController
+  - hash:
+      serializedVersion: 2
       Hash: a66794b62dbf044668a5f102bb7908c2
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineIndependentImpulseListener
+  - hash:
+      serializedVersion: 2
+      Hash: b6514f552bd2ee9e736a5678aa7f7de3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TMP_TextInfoDebugTool
+  - hash:
+      serializedVersion: 2
+      Hash: 4e0c63e49a9e2ef70afb47e3a0e28bc2
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.Pong
+    className: NetworkManagerPong
   - hash:
       serializedVersion: 2
       Hash: 6225eb0973ab0af667bc5f9d1b1b18de
@@ -903,16 +1593,52 @@ ScriptsOnlyBuild:
     className: CinemachineCollider
   - hash:
       serializedVersion: 2
+      Hash: f95972dce23eb4bef924cd7984973cfb
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.MultipleMatch
+    className: MatchNetworkManager
+  - hash:
+      serializedVersion: 2
+      Hash: bd3f0ca738703903e759f77536ed74fd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TMP_FrameRateCounter
+  - hash:
+      serializedVersion: 2
       Hash: bd50beb95120324d8c4e8386692b6e82
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineBlenderSettings
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror
+    className: MatchInterestManagement
+  - hash:
+      serializedVersion: 2
+      Hash: a1ca1237bad0f30ea5ba8f4060929114
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TMP_TextSelector_B
+  - hash:
+      serializedVersion: 2
       Hash: 23066ceca838af0cf02e00e3cf5155c1
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineImpulseSource
+  - hash:
+      serializedVersion: 2
+      Hash: 76aef43e801605d1829c8805eeee135c
+    assemblyName: Unity.InputSystem.dll
+    namespaceName: UnityEngine.InputSystem
+    className: InputActionReference
+  - hash:
+      serializedVersion: 2
+      Hash: cf95add559be53ae8bfdfcea86c5a18f
+    assemblyName: Mirror.dll
+    namespaceName: Mirror
+    className: FallbackTransport
   - hash:
       serializedVersion: 2
       Hash: 6939772cb3ce775a8e8d99f332534491
@@ -927,10 +1653,22 @@ ScriptsOnlyBuild:
     className: CinemachineVolumeSettings
   - hash:
       serializedVersion: 2
+      Hash: e8e82a15637ff46a5cc0caaca30c0372
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.NetworkRoom
+    className: NetworkRoomManagerExt
+  - hash:
+      serializedVersion: 2
       Hash: 723bcd0d34d5786d6e00443dba437630
     assemblyName: Assembly-CSharp.dll
     namespaceName: RTG
     className: RTScene
+  - hash:
+      serializedVersion: 2
+      Hash: 27e5341178f188b89bdc6495710b590c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: Benchmark01_UGUI
   - hash:
       serializedVersion: 2
       Hash: f336e086360abe49a3323e5f1583c35a
@@ -945,10 +1683,52 @@ ScriptsOnlyBuild:
     className: TransformGizmoCustomGizmo
   - hash:
       serializedVersion: 2
+      Hash: ad425eb6c32a6f6977115fef236ef55f
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.Additive
+    className: ShootingTankBehaviour
+  - hash:
+      serializedVersion: 2
+      Hash: 8a874a8207a7664bdf44e61f28717254
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: SkewTextExample
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror
+    className: SceneInterestManagement
+  - hash:
+      serializedVersion: 2
+      Hash: fe2d355deb0ca31d59a0a7cf4d141fc3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: Benchmark04
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ClientStart
+  - hash:
+      serializedVersion: 2
       Hash: 8e6ceabfd38a184413d69b7db56c89cc
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
     className: BeforeAfterTestCommandState
+  - hash:
+      serializedVersion: 2
+      Hash: c56a9426da8f5d94d45fd88dc881ef1b
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.Benchmark
+    className: PlayerMovement
+  - hash:
+      serializedVersion: 2
+      Hash: 69501abcda51721514ce989f617b052f
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.Basic
+    className: PlayerUI
   - hash:
       serializedVersion: 2
       Hash: 6ff1c52123c50b3d73f35cd0e2e65dfd
@@ -963,16 +1743,46 @@ ScriptsOnlyBuild:
     className: CinemachineHardLookAt
   - hash:
       serializedVersion: 2
+      Hash: 4d16cfbaa8e821a2b370e80844a0e9bc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TextMeshSpawner
+  - hash:
+      serializedVersion: 2
+      Hash: fa657c3ec40e8c152d1d7938b1a10cd9
+    assemblyName: Mirror.dll
+    namespaceName: Mirror
+    className: NetworkIdentity
+  - hash:
+      serializedVersion: 2
+      Hash: 306f6c6830d6725abf0598650905dcd4
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror
+    className: GUIConsole
+  - hash:
+      serializedVersion: 2
+      Hash: e63944317d2f5958e31963668bb29158
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: VertexShakeB
+  - hash:
+      serializedVersion: 2
       Hash: d6bdd0d69bc95bc0d465817cc98dbb57
     assemblyName: Assembly-CSharp.dll
     namespaceName: RTG
     className: RTSceneGrid
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: fb098a805b436b7bc9e759379191feea
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineInputProvider
+  - hash:
+      serializedVersion: 2
+      Hash: 4f60ff347d4efee4ef8cc7f627735018
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: Benchmark02
   - hash:
       serializedVersion: 2
       Hash: bb059b8498835cf4161e31e5fd61636d
@@ -981,10 +1791,46 @@ ScriptsOnlyBuild:
     className: LeftButton
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.MultipleAdditiveScenes
+    className: PhysicsSimulator
+  - hash:
+      serializedVersion: 2
+      Hash: bd3f0ca738703903e759f77536ed74fd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TMP_UiFrameRateCounter
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: VertexColorCycler
+  - hash:
+      serializedVersion: 2
+      Hash: 681b5f9be6f57e5a7b20908e503986d3
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror.Discovery
+    className: NetworkDiscoveryHUD
+  - hash:
+      serializedVersion: 2
+      Hash: e63944317d2f5958e31963668bb29158
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: VertexZoom
+  - hash:
+      serializedVersion: 2
       Hash: ffd3ed4fcd23b3e7745287c99a637247
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: Cinemachine3rdPersonAim
+  - hash:
+      serializedVersion: 2
+      Hash: 1d12411bfa32d734c4dad798554fe0fa
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror
+    className: NetworkLobbyManager
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -999,6 +1845,12 @@ ScriptsOnlyBuild:
     className: Tut_0_CreatingGizmos_and_AssigningObjects
   - hash:
       serializedVersion: 2
+      Hash: 9b5a106d716e10dbf0635b1180cc5e67
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.Chat
+    className: Player
+  - hash:
+      serializedVersion: 2
       Hash: 5e84370a36252d6aa37d6a7bd37710f7
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -1009,6 +1861,42 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: cd0ecdca0166232906c6f2df9dddc3d3
+    assemblyName: Unity.InputSystem.dll
+    namespaceName: UnityEngine.InputSystem.Editor
+    className: AdvancedDropdownWindow
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraAssignment
+  - hash:
+      serializedVersion: 2
+      Hash: e1be6cb5fb432e26f64fcb687a018983
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror
+    className: NetworkTransform
+  - hash:
+      serializedVersion: 2
+      Hash: e87f50864f8a979f1228e8c69bd62658
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.Pong
+    className: Player
+  - hash:
+      serializedVersion: 2
+      Hash: e80c1450883443c68d6c2dade213536f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TMPro_InstructionOverlay
+  - hash:
+      serializedVersion: 2
+      Hash: 9cd92579d1b2ad2937ce6de571c706aa
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.MultipleAdditiveScenes
+    className: MultiSceneNetManager
   - hash:
       serializedVersion: 2
       Hash: 865025040a31b970a3497bbbf5ed73cd
@@ -1023,6 +1911,18 @@ ScriptsOnlyBuild:
     className: Tut_5_CustomObjectLocalPivot
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TeleType
+  - hash:
+      serializedVersion: 2
+      Hash: 7536c3aaa3b668b80f1580147a12d30d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TextMeshProFloatingText
+  - hash:
+      serializedVersion: 2
       Hash: 8f15c253902ff4eef507927669b9dc80
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -1033,6 +1933,24 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_ColorGradient
+  - hash:
+      serializedVersion: 2
+      Hash: 4cc71a9be9ce5d7402a784f596a204bb
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror.Discovery
+    className: NetworkDiscovery
+  - hash:
+      serializedVersion: 2
+      Hash: 0784d4fd5b93bd75440d01eb2fac4233
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: VertexShakeA
+  - hash:
+      serializedVersion: 2
+      Hash: 8b1fe5dfdcf943fb3b72506b9f19335f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnvMapAnimator
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1053,6 +1971,12 @@ ScriptsOnlyBuild:
     className: UIBedGrey
   - hash:
       serializedVersion: 2
+      Hash: 41c9825cd53cff5bfe5d9f873c704b08
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror
+    className: NetworkTransformChild
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: RTG
@@ -1069,6 +1993,24 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Outline
+  - hash:
+      serializedVersion: 2
+      Hash: 1e0c784ff68e6df57d641ad43622504f
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror
+    className: NetworkProximityChecker
+  - hash:
+      serializedVersion: 2
+      Hash: 3f71d9d53af34ea64cb743fef736aaa8
+    assemblyName: Mirror.Components.dll
+    namespaceName: Mirror
+    className: DistanceInterestManagementCustomRange
+  - hash:
+      serializedVersion: 2
+      Hash: 88e3b86c3ab08e02b94869c8fc5ce863
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.NetworkRoom
+    className: PlayerScore
   - hash:
       serializedVersion: 2
       Hash: c069d7d3815bf5712723b7979b8edd48
@@ -1125,6 +2067,12 @@ ScriptsOnlyBuild:
     className: CinemachineHardLockToTarget
   - hash:
       serializedVersion: 2
+      Hash: e4fb2671f4e7782c0481d74d32ad6df2
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.Tanks
+    className: Projectile
+  - hash:
+      serializedVersion: 2
       Hash: 748dd2a2a28da4e618912da5ac45684b
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -1135,12 +2083,6 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineBasicMultiChannelPerlin
-  - hash:
-      serializedVersion: 2
-      Hash: aa88ae22474df55295327e4ee99e5a24
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Toggle
   - hash:
       serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
@@ -1161,10 +2103,16 @@ ScriptsOnlyBuild:
     className: Slider
   - hash:
       serializedVersion: 2
-      Hash: e9be4eb3c4570f4a2c5a663682f154ea
+      Hash: 0231ebafc3e5260ea86cee98363bf03d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: objectMouseClickChangeMaterial
+  - hash:
+      serializedVersion: 2
+      Hash: 880d064aa7bf32abd8295b0fe07bcc13
+    assemblyName: Unity.InputSystem.dll
+    namespaceName: UnityEngine.InputSystem
+    className: InputSystemObject
   - hash:
       serializedVersion: 2
       Hash: 0fd6822f6177297bd0eb4d83cc7a9030
@@ -1173,11 +2121,41 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
+      Hash: 754d4fca15cad4e77ead9186a80e35c6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ServerStart
+  - hash:
+      serializedVersion: 2
+      Hash: ff4753395d726a7aadce9c48dcaf99d6
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.MultipleAdditiveScenes
+    className: Reward
+  - hash:
+      serializedVersion: 2
+      Hash: 5fdc3c691001157e6a51b430df6e5f8c
+    assemblyName: Mirror.Examples.dll
+    namespaceName: Mirror.Examples.MultipleAdditiveScenes
+    className: PlayerScore
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.InputSystem.dll
+    namespaceName: UnityEngine.InputSystem.EnhancedTouch
+    className: TouchSimulation
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 3ff6f790ae47fae80bc5c9c6db5d66bf
+    assemblyName: Mirror.dll
+    namespaceName: kcp2k
+    className: KcpTransport
   platform: 19
   scenePathNames:
   - Assets/Scenes/Vivian.unity
-  playerPath: D:/IM3080CJ.exe
+  playerPath: D:/IDea/IM3080CJ/Builds/Client/IDeaEditor.exe

@@ -10,6 +10,7 @@ public class ModelManager : MonoBehaviour
     [Header("Camera")]
     [SerializeField] private Camera cam;
     public GameObject selectedModel;
+    [SerializeField] private GameObject previousModel;
 
     private readonly Timer _MouseSingleClickTimer = new Timer();
     private GameObject floatControl;
@@ -18,6 +19,8 @@ public class ModelManager : MonoBehaviour
     private ObjectTransformGizmo RotateGizmo;
     private ObjectTransformGizmo ScaleGizmo;
     private ObjectTransformGizmo UniversalGizmo;
+
+    [SerializeField] private GameObject placeCamAnchor;
 
     [SerializeField]
     private GameObject floatingModelControlUISlot;
@@ -36,6 +39,7 @@ public class ModelManager : MonoBehaviour
 
         _MouseSingleClickTimer.Interval = 400;
         _MouseSingleClickTimer.Elapsed += SingleClick;
+        placeCamAnchor.SetActive(false);
 
     }
 
@@ -44,6 +48,7 @@ public class ModelManager : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
+            //placeCamAnchor.SetActive(true);
             if(selectedModel==null)
             {
                 grab();
@@ -101,6 +106,8 @@ public class ModelManager : MonoBehaviour
 
     private void callModelControlUI()
     {
+        placeCamAnchor.SetActive(true);
+
         Vector3 instentiatelocation = getSelectedModelScreenCoordinate() + new Vector3(100, 50, 0);
         floatControl = Instantiate(floatingModelControlUISlot);
         floatControl.name = "Float Control";
@@ -127,6 +134,11 @@ public class ModelManager : MonoBehaviour
     }
     private void grab()
     {
+        if (previousModel != null)
+        {
+            placeCamAnchor.SetActive(true);
+        }
+
         if (selectedModel == null)
         {
             RaycastHit hit = CastRay();
@@ -139,6 +151,7 @@ public class ModelManager : MonoBehaviour
                 }
 
                 selectedModel = hit.collider.gameObject;
+                previousModel = selectedModel;
                 //selectedModel.GetComponent<Renderer>().material.SetFloat("_OutlineWidth", 1.3f);
 
                 callModelControlUI();
@@ -158,6 +171,7 @@ public class ModelManager : MonoBehaviour
 
         UniversalGizmo.Gizmo.SetEnabled(false);
         ScaleGizmo.Gizmo.SetEnabled(false);
+        placeCamAnchor.SetActive(false);
     }
 
 

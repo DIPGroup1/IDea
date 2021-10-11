@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class objectMouseClickChangeMaterial : MonoBehaviour
 {
-    //public GameObject topbar;
+    public GameObject camObject;
     const string TAG = "topbar";
     topbar _topbar;
     public string state;
+
+    //Player Controllers
+    private GameObject[] playerObjectArr;                   //Store player camera controllers to be used
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +28,7 @@ public class objectMouseClickChangeMaterial : MonoBehaviour
         {
             state = "display";
             _topbar.caller();//Brandon: must reserve
+
             Debug.Log("topbar display");
         }
         else
