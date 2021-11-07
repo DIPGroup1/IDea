@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1cd78782b1b9e4d52928f01a23aa74e1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - chair: {instanceID: 0}
+  - position: {instanceID: 0}
+  - hideSprite: {instanceID: 0}
+  - displaySprite: {instanceID: 0}
+  - fpInst: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
