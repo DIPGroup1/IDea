@@ -1,6 +1,6 @@
 # IDea
 
-#General Use of Program
+# General Use of Program
 > ensure that the server is online (Direct message for turning on server) 
 
 1. Open the IdeaEditor.exe file 
@@ -29,3 +29,9 @@ To view VR scene:
 3. Render the settings in Unity for VR based on https://developers.google.com/cardboard/develop/unity/quickstart
 
 -----------------------------------------------------------------------------------------------------------------
+
+# Other Assets 
+
+Mirror | Network : https://assetstore.unity.com/packages/tools/network/mirror-129321
+Extensions for Playfab: https://assetstore.unity.com/packages/tools/utilities/extensions-for-playfab-177350
+Runtime Transform Gizmo: https://github.com/HiddenMonk/Unity3DRuntimeTransformGizmo 
